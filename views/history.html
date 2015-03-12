@@ -1,0 +1,18 @@
+<div class="col-sm-11 col-sm-offset-1">
+	<h3 class="page-header">History</h3>
+	<div class="panel panel-default" ng-class="{'panel-success':order.confirmed}" ng-repeat="(key,order) in history">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left">Telephone {{order.tel}}</h3>
+			<button class="btn btn-danger btn-sm pull-right" ng-click="deleteHistory(key, this.order)">Delete History</button>
+		</div>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="item in order.order">
+				<span>{{item.title}}</span>
+				<span class="pull-right">${{item.price | number:2}}</span>
+			</li>
+		</ul>
+		<div class="panel-heading clearfix">
+			<span class="pull-right">Total: ${{order.total | number:2}}</span>
+		</div>
+	</div>
+</div>

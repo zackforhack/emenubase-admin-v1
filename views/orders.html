@@ -1,0 +1,19 @@
+<div class="col-sm-11 col-sm-offset-1">
+	<h3 class="page-header">Orders</h3>
+	<div class="panel panel-default" ng-class="{'panel-success':order.confirmed}" ng-repeat="(key,order) in orders">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left">Telephone:{{order.tel}} Name: {{order.clientname}} Address: {{order.clientaddress}}</h3>
+			<button class="btn btn-default btn-sm pull-right" ng-hide="order.confirmed" ng-click="confirmOrder(key, this.order)">Confirm Order</button>
+			<button class="btn btn-danger btn-sm pull-right" ng-show="order.confirmed" ng-click="deleteOrder(key, this.order)">Delete Order</button>
+		</div>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="item in order.order">
+				<span>{{item.title}}</span>
+				<span class="pull-right">${{item.price | number:2}}</span>
+			</li>
+		</ul>
+		<div class="panel-heading clearfix">
+			<span class="pull-right">Total: ${{order.total | number:2}}</span>
+		</div>
+	</div>
+</div>

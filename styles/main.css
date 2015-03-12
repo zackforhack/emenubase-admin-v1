@@ -1,0 +1,127 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Global add-ons
+ */
+
+
+/*
+ * Sidebar
+ */
+ .nav-sidebar{
+  text-align: center;
+ }
+.nav.nav-sidebar .glyphicon{
+  font-size: 30px;
+}
+.nav-sidebar a{
+
+}
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding: 30px 10px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #818181;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.nav.nav-sidebar > li > a:hover,
+.nav.nav-sidebar > li > a:focus{
+  background-color: transparent;
+  color: #fff;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+}
+
+/*
+ * Main content
+ */
+.main {
+  padding: 20px;
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+/*
+ * My Menu Page
+ */
+.add-menu-item-block{
+  position: static;
+}
+.add-menu-item-block h3{
+  padding-bottom: 9px;
+  margin: 20px 0 20px;
+}
+.add-menu-item-block .input-group-addon{
+  background: #fff
+}
+.add-menu-item-block .form-group{
+  margin-bottom: 10px;
+}
+.add-menu-item-block .btn-success{
+  width: 100%;
+}
+
+/*
+ * Category Page
+ */
+.category-thumbnail h5{
+  text-align: center;
+}
+a.category-thumbnail:hover, a.category-thumbnail:focus{
+  text-decoration: none;
+}
+
+/*
+ * Media Query
+ */
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #393939;
+  }
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .add-menu-item-block{
+    background: #f0f0f2;
+    position: fixed;
+    right: 0;
+    top: 51px;
+    bottom: 0;
+    overflow-y: auto;
+  }
+}
