@@ -25,4 +25,8 @@ angular.module('appApp')
 
 
   	};
+
+    $timeout(function(){
+    $dialog.dialog({}).open('views/login.html');  
+  }, 3000);  
   });

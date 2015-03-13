@@ -42,9 +42,3 @@ angular.module('appApp', [
   });
 });
 
-
- function DialogDemoCtrl($scope, $timeout, $dialog){
-  $timeout(function(){
-    $dialog.dialog({}).open('views/login.html');  
-  }, 3000);  
-}
