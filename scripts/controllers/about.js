@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appApp')
-  .controller('AboutCtrl', function ($scope, $firebase, $timeout, $dialog) {
+  .controller('AboutCtrl', function ($scope, $firebase) {
     var about = new Firebase('https//gforgelato.firebaseio.com/About');
 
     $scope.about = $firebase(about);
@@ -26,7 +26,7 @@ angular.module('appApp')
 
   	};
 
-    $timeout(function(){
-    $dialog.dialog({}).open('views/login.html');  
-  }, 3000);  
+  //   $timeout(function(){
+  //   $dialog.dialog({}).open('views/login.html');  
+  // }, 3000);  
   });
