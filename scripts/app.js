@@ -41,3 +41,10 @@ angular.module('appApp', [
     $rootScope.myPage = $location.path().substring($location.path().indexOf('/', 1)).replace('/','');
   });
 });
+
+
+ function DialogDemoCtrl($scope, $timeout, $dialog){
+  $timeout(function(){
+    $dialog.dialog({}).open('views/login.html');  
+  }, 3000);  
+}
