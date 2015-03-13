@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appApp')
-  .controller('AboutCtrl', function ($scope, $firebase) {
+  .controller('AboutCtrl', function ($scope, $firebase, $timeout, $dialog) {
     var about = new Firebase('https//gforgelato.firebaseio.com/About');
 
     $scope.about = $firebase(about);
