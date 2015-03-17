@@ -6,8 +6,7 @@ angular.module('appApp', [
   'ngSanitize',
   'ngRoute',
   'firebase',
-  'naif.base64',
-  'ui.bootstrap'
+  'naif.base64'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -42,4 +41,3 @@ angular.module('appApp', [
     $rootScope.myPage = $location.path().substring($location.path().indexOf('/', 1)).replace('/','');
   });
 });
-
