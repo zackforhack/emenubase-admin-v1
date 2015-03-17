@@ -6,7 +6,8 @@ angular.module('appApp', [
   'ngSanitize',
   'ngRoute',
   'firebase',
-  'naif.base64'
+  'naif.base64',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider

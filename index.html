@@ -35,6 +35,27 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Admin Panel</a>
+          <div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I am a modal!</h3>
+        </div>
+        <div class="modal-body">a
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button class="btn btn-default" ng-click="open()">Open me!</button>
+    </div>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
@@ -83,11 +104,13 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src='https://cdn.firebase.com/v0/firebase.js'></script>
         <script src='https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js'></script>
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/orders.js"></script>
         <script src="scripts/controllers/history.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/login.js"></script>
         <script src="scripts/angular-base64-upload.min.js"></script>
         <!-- endbuild -->
 </body>
