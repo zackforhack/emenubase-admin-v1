@@ -1,5 +1,5 @@
 angular.module('appApp')
-  .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
+  .controller('ModalDemoCtrl', function ($scope, $modal, $log, $firebaseAuth) {
 
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -28,7 +28,7 @@ angular.module('appApp')
 // It is not the same as the $modal service used above.
 
 angular.module('appApp')
-  .controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+  .controller('ModalInstanceCtrl', function ($scope, $modalInstance, items,$firebaseAuth) {
 
   $scope.items = items;
   $scope.selected = {
