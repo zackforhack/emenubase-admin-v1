@@ -1,6 +1,9 @@
 angular.module('appApp')
   .controller('ModalDemoCtrl', function ($scope, $modal, $log, $firebaseSimpleLogin) {
 
+    var ref = new Firebase('https://gforgelato.firebaseio.com');
+    $scope.auth = $firebaseSimpleLogin(ref);
+
   $scope.items = ['item1', 'item2', 'item3'];
 
   $scope.open = function (size) {
