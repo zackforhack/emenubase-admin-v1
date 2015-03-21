@@ -46,13 +46,11 @@ angular.module('appApp')
         password: $scope.password
       }).then(function(user) {
         console.log('user: ', user);
+        $modalInstance.close();
       }, function(error) {
         console.log('error: ', error);
       });
 
-     if($rootScope.auth.user != null)
-     { $modalInstance.close();
-     }  
 
 
   };
