@@ -8,6 +8,8 @@ angular.module('appApp')
 
   $scope.open = function (size) {
 
+    if($rootScope.auth.user == null)
+    {  
     var modalInstance = $modal.open({
       templateUrl: 'views/myModalContent.html',
       controller: 'ModalInstanceCtrl',
@@ -25,6 +27,7 @@ angular.module('appApp')
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
+  }
   };
 });
 
