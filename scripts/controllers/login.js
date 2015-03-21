@@ -44,8 +44,8 @@ angular.module('appApp')
      console.log('signing in...');
 
       $rootScope.auth.$login('password', {
-        email: 'guy@face.com',
-        password: 'cookie'
+        email: 'zackforhack@gmail.com',
+        password: 'qwerty12'
       }).then(function(user) {
         console.log('user: ', user);
       }, function(error) {
