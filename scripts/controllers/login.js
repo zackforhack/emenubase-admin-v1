@@ -8,7 +8,7 @@ angular.module('appApp')
 
   $scope.open = function (size) {
 
-    if($rootScope.auth.user == null)
+    if($rootScope.auth.uid == null)
     {  
     var modalInstance = $modal.open({
       templateUrl: 'views/myModalContent.html',
