@@ -2,7 +2,7 @@ angular.module('appApp')
   .controller('ModalDemoCtrl', function ($scope, $modal, $log, $firebaseSimpleLogin) {
 
     var ref = new Firebase('https://gforgelato.firebaseio.com');
-    $scope.auth = $firebaseSimpleLogin(ref);
+    $rootScope.auth = $firebaseSimpleLogin(ref);
 
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -40,6 +40,19 @@ angular.module('appApp')
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);
+    
+     console.log('signing in...');
+
+      $rootScope.auth.$login('password', {
+        email: 'guy@face.com',
+        password: 'cookie'
+      }).then(function(user) {
+        console.log('user: ', user);
+      }, function(error) {
+        console.log('error: ', error);
+      });
+
+
   };
 
   $scope.cancel = function () {
