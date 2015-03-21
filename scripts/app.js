@@ -7,8 +7,7 @@ angular.module('appApp', [
   'ngRoute',
   'firebase',
   'naif.base64',
-  'ui.bootstrap',
-  'firebasesimplelogin'
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
