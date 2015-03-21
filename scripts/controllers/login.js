@@ -39,7 +39,6 @@ angular.module('appApp')
   };
 
   $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
     
      console.log('signing in...');
 
@@ -52,7 +51,9 @@ angular.module('appApp')
         console.log('error: ', error);
       });
 
-     console.log($rootScope.auth);  
+     if($rootScope.auth.user != null)
+     { $modalInstance.close($scope.selected.item);
+     }  
 
 
   };
