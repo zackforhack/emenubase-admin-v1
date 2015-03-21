@@ -12,6 +12,8 @@ angular.module('appApp')
       templateUrl: 'views/myModalContent.html',
       controller: 'ModalInstanceCtrl',
       size: size,
+      backdrop: 'static',
+      keyboard: 'false',
       resolve: {
         items: function () {
           return $scope.items;
