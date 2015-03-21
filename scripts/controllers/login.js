@@ -56,6 +56,8 @@ angular.module('appApp')
         console.log('error: ', error);
       });
 
+      console.log($rootScope.auth);
+
 
 
   };
