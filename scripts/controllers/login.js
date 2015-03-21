@@ -1,5 +1,5 @@
 angular.module('appApp')
-  .controller('ModalDemoCtrl', function ($scope, $modal, $log, $firebaseSimpleLogin) {
+  .controller('ModalDemoCtrl', function ($rootScope,$scope, $modal, $log, $firebaseSimpleLogin) {
 
     var ref = new Firebase('https://gforgelato.firebaseio.com');
     $rootScope.auth = $firebaseSimpleLogin(ref);
@@ -31,7 +31,7 @@ angular.module('appApp')
 // It is not the same as the $modal service used above.
 
 angular.module('appApp')
-  .controller('ModalInstanceCtrl', function ($scope, $modalInstance, items, $firebaseSimpleLogin) {
+  .controller('ModalInstanceCtrl', function ($rootScope,$scope, $modalInstance, items, $firebaseSimpleLogin) {
 
   $scope.items = items;
   $scope.selected = {
