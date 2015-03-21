@@ -19,8 +19,7 @@ angular.module('appApp')
       }
     });
 
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
+    modalInstance.result.then(function () {
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
@@ -38,7 +37,7 @@ angular.module('appApp')
     item: $scope.items[0]
   };
 
-  $scope.ok = function () {
+  $scope.login = function () {
     
      console.log('signing in...');
 
@@ -52,13 +51,10 @@ angular.module('appApp')
       });
 
      if($rootScope.auth.user != null)
-     { $modalInstance.close($scope.selected.item);
+     { $modalInstance.close();
      }  
 
 
   };
 
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
 }); 
