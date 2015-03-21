@@ -13,7 +13,7 @@ angular.module('appApp')
       controller: 'ModalInstanceCtrl',
       size: size,
       backdrop: 'static',
-      keyboard: 'false',
+      keyboard: false,
       resolve: {
         items: function () {
           return $scope.items;
